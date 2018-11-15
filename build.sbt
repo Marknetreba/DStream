@@ -9,4 +9,5 @@ libraryDependencies ++= Seq("org.apache.spark" % "spark-sql_2.11" % "2.2.0",
   "org.apache.spark" %% "spark-streaming" % "2.2.0",
   "org.apache.spark" % "spark-sql-kafka-0-10_2.11" % "2.2.0",
   "org.apache.spark" %% "spark-streaming-kafka-0-10" % "2.1.0",
-  "com.typesafe.scala-logging" %% "scala-logging" % "3.+")
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.+",
+  "org.apache.ignite" % "ignite-spark" % "2.5.0")
