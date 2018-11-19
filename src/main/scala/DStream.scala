@@ -59,7 +59,7 @@ object DStream {
         .withColumn("event_rate", col("requests").divide(col("duration_minutes")))
         .withColumn("categories_rate", col("distinct_categories").divide(col("duration_minutes")))
         .withColumn("views_clicks", col("views").divide(col("clicks")))
-        .withColumn("bot", when(col("views_clicks") > 3 and col("categories_rate") > 0.5 and col("event_rate") > 100, "yes").otherwise("no"))
+        .withColumn("bot", when(col("views_clicks") > 0.3 and col("categories_rate") > 0.5 and col("event_rate") > 100, "yes").otherwise("no"))
 
         .select("ip", "bot", "duration_minutes", "distinct_categories", "event_rate", "categories_rate", "views_clicks")
 
